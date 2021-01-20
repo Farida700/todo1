@@ -9,3 +9,6 @@ def test(request):
 
 def second(request):
     return HttpResponse("И кто только это придумал?")
+
+def third(request):
+    return HttpResponse("Забыла, что хотела написать(((")
