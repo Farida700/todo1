@@ -2,7 +2,7 @@ from django.shortcuts import render, HttpResponse
 
 
 def homepage(request):
-    return HttpResponse("Привет мир!")
+    return render(request, "Библиотека.html")
 
 def test(request):
     return render(request, "test.html")
