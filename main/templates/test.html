@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Все сложно</title>
-</head>
-<body>
+  </head>
+  <body>
     <h2>Капец, ничего не понятно!</h2>
-</body>
+    <div>Версия 2</div>
+    <p>{% for todo in todo_list %}</p>
+    <i>{{ todo.text }} - {{ todo.created_at}}</i>
+    {% endfor %}
+  </body>
 </html>
