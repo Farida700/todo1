@@ -25,8 +25,8 @@ section{
 
 .create_button{
     padding: 12px 20px;
-    background-color: aqua;
-    border: 1px solid aqua;
+    background-color: rgb(243, 79, 243);
+    border: 1px solid rgb(225, 99, 230);
     color: aliceblue;
     font-size: 18px;
     text-transform: uppercase;
@@ -36,8 +36,8 @@ section{
 }
 
 .create_button:active{
-    border: 1px solid pink 
-box-shadow: 2px 2px 5px 3px pink    
+    border: 1px solid pink;
+    box-shadow: 2px 2px 5px 3px pink;   
 }
 
 .todo_container{
@@ -58,7 +58,7 @@ box-shadow: 2px 2px 5px 3px pink
 }
 
 .todo_item.done{
-    background-color: yellow;
+    background-color: #E0E0E0;
     text-decoration: line-through;
     color: #757575;
 }
@@ -89,8 +89,8 @@ box-shadow: 2px 2px 5px 3px pink
 
 .todo_item_footer{
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    min-height: 35px;
 }
 
 .todo_item_footer p{
