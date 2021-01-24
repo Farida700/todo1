@@ -35,19 +35,30 @@
         <div class="todo_item
             {% if todo.is_favorite %}
                 marked
+              {% elif todo.is_closed %}
+                done
             {% endif %}
         ">
           <div class="todo_item_header">
             <lable class="checkbox_container">
-              <input type="checkbox" />
+              <input type="checkbox" 
+                {% if todo.is_closed %}
+                    checked
+                {% endif %}
+              />
               <span class="checkmark"></span>
             </lable>
-            <h4>{{ todo.text }}</h4>
+            <h4><a href = "{% url 'closed-todo' todo.id %}">{{ todo.text }}</a></h4>
           </div>
           <div class="todo_item_footer">
             <p>{{ todo.created_at }} <span> 17:22 </span></p>
             <div class="action_buttons">
-              <a href = "{% url 'mark-todo' todo.id %}" ><img src="{% static './icons/звезда.png' %}" /></a>
+                {% if todo.is_favorite %}
+              <a href = "{% url 'mark-todo' todo.id %}" ><img src="{% static './icons/star.png' %}" /></a>
+                {% else %}
+                <a href = "{% url 'mark-todo' todo.id %}" ><img src="{% static './icons/звезда.png' %}" /></a>
+                {% endif %}
+
               <a href = "{% url 'delete-todo' todo.id %}"><img src="{% static './icons/корзина.png' %}" /></a>
             </div>
           </div>
