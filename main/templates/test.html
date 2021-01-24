@@ -18,12 +18,16 @@
     {% endfor %} -->
     <section>
       <div class="create_container">
-        <input
-          class="create_input"
-          type="text"
-          placeholder="Напишите сюда свой заказ"
-        />
-        <button class="create_button">Добавить</button>
+        <form action="{% url 'add-todo' %}" method = "POST">
+          {% csrf_token %}
+          <input
+            class="create_input"
+            type="text"
+            placeholder="Напишите сюда свой заказ"
+            name = "todo_text"
+          />
+          <button class="create_button">Добавить</button>
+        </form>
       </div>
 
       <div class="todo_container">
@@ -39,8 +43,8 @@
           <div class="todo_item_footer">
             <p>{{ todo.created_at }} <span> 17:22 </span></p>
             <div class="action_buttons">
-              <img src="./icons/звезда.png" />
-              <img src="./icons/корзина.png" />
+              <img src="{% static './icons/звезда.png' %}" />
+              <img src="{% static './icons/корзина.png' %}" />
             </div>
           </div>
         </div>
