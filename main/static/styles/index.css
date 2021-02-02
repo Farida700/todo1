@@ -5,14 +5,21 @@
     color: #263238
 }
 
-.fon{
-    background-image: url(https://previews.123rf.com/images/leoedition/leoedition1708/leoedition170800390/84001974-banner-online-book-store-book-shelf-or-bookcase-on-the-background.jpg);
+img{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 3px fuchsia;
+    
+    /* background-image: url(https://previews.123rf.com/images/leoedition/leoedition1708/leoedition170800390/84001974-banner-online-book-store-book-shelf-or-bookcase-on-the-background.jpg); */
 }
 
 .text{
-    font-size: medium;
+    position: relative;
+    font-size: 50px;
     font-style: italic;
     color: red;
+    text-align: center;
 }
 
 section{
@@ -20,19 +27,19 @@ section{
     padding: 20px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
 }
 
 .create_container{
     width: 50%;
     border: 10px;
-    padding: 10px 15px;
-    margin-bottom: 20px;
+    padding: 5px 10px;
+    margin-bottom: 10px;
 }
 
 .create_input{
-    padding: 15px;
-    margin-bottom: 10px;
+    padding: 10px;
+    margin-bottom: 5px;
     font-size: 15px;
     width: 50%;
 }
@@ -47,6 +54,7 @@ section{
     font-weight: bold;
     border-radius: 3px;
     cursor: pointer;
+    margin-top: 10px 10px;
 }
 
 .create_button:active{
