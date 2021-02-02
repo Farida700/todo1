@@ -7,15 +7,10 @@
     <title>Библиотека</title>
     <link rel="stylesheet" href="{% static 'styles/index.css' %}" />
     <link rel="stylesheet" href="{% static 'styles/checkbox.css' %}" />
-    <!-- <link rel="stylesheet" href="./styles/index.css" />
-        <link rel="stylesheet" href="./styles/checkbox.css" /> -->
   </head>
   <body>
-    <!-- <h2>Капец, ничего не понятно!</h2>
-    <div>Версия 2</div>
-    <p>{% for todo in todo_list %}</p>
-    <i>{{ todo.text }} - {{ todo.created_at}}</i>
-    {% endfor %} -->
+    <img class = "fon">
+    <h1 class = "text">Добро пожаловать с книжный магазин "ФЛАН"</h1>
     <section>
       <div class="create_container">
         <form action="{% url 'add-todo' %}" method = "POST">
@@ -23,11 +18,33 @@
           <input
             class="create_input"
             type="text"
-            placeholder="Напишите сюда свой заказ"
+            placeholder="Название книги"
             name = "todo_text"
           />
-          <button class="create_button">Добавить</button>
         </form>
+      </div>
+      <div class="create_container">
+        <form action="{% url 'add-todo' %}" method = "POST">
+          {% csrf_token %}
+          <input
+            class="create_input"
+            type="text"
+            placeholder="Автор книги"
+            name = "todo_text"
+          />
+        </form>
+      </div>
+      <div class="create_container">
+        <form action="{% url 'add-todo' %}" method = "POST">
+          {% csrf_token %}
+          <input
+            class="create_input"
+            type="text"
+            placeholder="Стоимость книги"
+            name = "todo_text"
+          />
+        </form>
+        <button class="create_button">Добавить</button>
       </div>
 
       <div class="todo_container">
@@ -51,19 +68,19 @@
             <h4><a href = "{% url 'closed-todo' todo.id %}">{{ todo.text }}</a></h4>
           </div>
           <div class="todo_item_footer">
-            <p>{{ todo.created_at }} <span> 17:22 </span></p>
+            <p>{{ todo.created_at }} </p>
             <div class="action_buttons">
                 {% if todo.is_favorite %}
-              <a href = "{% url 'mark-todo' todo.id %}" ><img src="{% static './icons/star.png' %}" /></a>
+                  <a href = "{% url 'unmark-todo' todo.id %}" ><img src="{% static './icons/heart.png' %}" /></a>
                 {% else %}
-                <a href = "{% url 'mark-todo' todo.id %}" ><img src="{% static './icons/звезда.png' %}" /></a>
+                  <a href = "{% url 'mark-todo' todo.id %}" ><img src="{% static './icons/heart2.png' %}" /></a>
                 {% endif %}
 
-              <a href = "{% url 'delete-todo' todo.id %}"><img src="{% static './icons/корзина.png' %}" /></a>
+              <a href = "{% url 'delete-todo' todo.id %}"><img src="{% static './icons/basket.png' %}" /></a>
             </div>
           </div>
         </div>
-        {% endfor %}
+      {% endfor %}
       </div>
     </section>
   </body>

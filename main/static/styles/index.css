@@ -2,7 +2,17 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    color: #263238;
+    color: #263238
+}
+
+.fon{
+    background-image: url(https://previews.123rf.com/images/leoedition/leoedition1708/leoedition170800390/84001974-banner-online-book-store-book-shelf-or-bookcase-on-the-background.jpg);
+}
+
+.text{
+    font-size: medium;
+    font-style: italic;
+    color: red;
 }
 
 section{
@@ -14,19 +24,23 @@ section{
 }
 
 .create_container{
-    width: 80%;
+    width: 50%;
+    border: 10px;
+    padding: 10px 15px;
+    margin-bottom: 20px;
 }
 
 .create_input{
-    padding: 12px 5px;
-    font-size: 18px;
-    width: 80%;
+    padding: 15px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    width: 50%;
 }
 
 .create_button{
     padding: 12px 20px;
-    background-color: rgb(243, 79, 243);
-    border: 1px solid rgb(225, 99, 230);
+    background-color: rgb(25, 228, 25);
+    border: 1px solid  rgb(27, 235, 27);
     color: white;
     font-size: 18px;
     text-transform: uppercase;
@@ -36,35 +50,36 @@ section{
 }
 
 .create_button:active{
-    border: 1px solid pink;
-    box-shadow: 2px 2px 5px 3px pink;   
+    border: 1px solid  #CE93D8;
+    box-shadow: 2px 2px 5px 3px #FCE4EC;
 }
 
 .todo_container{
-   padding: 30px 20px;
-   display: flex;
-   justify-content: space-around;
-   flex-wrap: wrap;
-   width: 100%; 
+    padding: 30px 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
 .todo_item{
-    border: 1px solid grey;
-    border-radius: 5px;
-    width: 24%;
+    border: 1px solid gray;
+    border-radius: 10px;
+    width: 20%;
+    height: 50%;
     padding: 10px 15px;
     background-color: #C8E6C9;
-    margin-bottom: 20px;
+    margin-bottom: 20px
 }
 
 .todo_item.done{
     background-color: #E0E0E0;
     text-decoration: line-through;
-    color: #757575;
+    color: greenyellow;
 }
 
 .todo_item.done h4, .todo_item.done p, .todo_item.done span{
-    color: #757575
+    color: greenyellow;
 }
 
 .todo_item.done img{
@@ -72,8 +87,8 @@ section{
 }
 
 .todo_item.marked{
-    background-color: #FFE082;
-    border: 2px solid #fad66a;
+    background-color: rgb(235, 127, 235);
+    border: 2px solid rgb(240, 118, 240);
 }
 
 .todo_item_header{
@@ -96,7 +111,6 @@ section{
     justify-content: space-between;
     align-items: center;
 }
-
 .todo_item_footer p{
     font-size: 15px;
     font-family: sans-serif;
